@@ -8,10 +8,12 @@
       services:
         selenium:
           image: selenium/standalone-chrome:latest
+          ports:
+            - 4444:4444
           options: >-
             --shm-size 2g
-            ports:
-            - 4444:4444
+            --health-cmd "curl -sS http://localhost:4444/wd/hub/status || exit 1"
+            --health-timeout 5s
       steps:
         - name: Checkout repo
           uses: actions/checkout@v4
@@ -29,4 +31,4 @@
           env:
             SELENIUM_REMOTE_URL: http://localhost:4444/wd/hub
           run: |
-            pytest --driver Remote --capability browserName chrome
+            pytest
