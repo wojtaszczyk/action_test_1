@@ -1,0 +1,32 @@
+  name: Selenium Python CI
+  #chcemy żeby zaczął się po push'u
+  on: [push]
+  jobs:
+    build:
+      runs-on: ubuntu-latest
+
+      services:
+        selenium:
+          image: selenium/standalone-chrome:latest
+          options: >-
+            --shm-size 2g
+            ports:
+            - 4444:4444
+      steps:
+        - name: Checkout repo
+          uses: actions/checkout@v4
+
+        - name: Set up Python 3.8
+          uses: action/setup-python@v4
+          with:
+              python-version: '3.8'
+
+        - name: Install dependencies
+          run: |
+            python -m pip install --upgrade.pip
+            pip install -r wymagania.txt
+        - name: Run tests
+          env:
+            SELENIUM_REMOTE_URL: http://localhost:4444/wd/hub
+          run: |
+            pytest --driver Remote --capability browserName chrome
