@@ -1,19 +1,6 @@
-import unittest
-from calculator import Calculator
+class Calculator:
+    def add(self, a, b):
+        return a + b
 
-
-class TestCalculator(unittest.TestCase):
-
-    def test_add(self):
-        calculator = Calculator()
-        result = calculator.add(10, 20)
-        self.assertEqual(result, 30)
-
-    def test_multiply(self):
-        calculator = Calculator()
-        result = calculator.multiply(2, 2)
-        self.assertEqual(result, 4)
-
-
-if __name__ == '__main__':
-    unittest.main()
+    def multiply(self, a, b):
+        return a * b

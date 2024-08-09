@@ -1,10 +1,9 @@
 import unittest
-from unittest import TestCase
-
 from calculator import Calculator
 
 
 class TestCalculator(unittest.TestCase):
+
     def test_add(self):
         calculator = Calculator()
         result = calculator.add(10, 20)
@@ -18,5 +17,3 @@ class TestCalculator(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
-
