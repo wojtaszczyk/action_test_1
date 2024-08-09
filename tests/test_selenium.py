@@ -20,7 +20,7 @@ class TestExample(unittest.TestCase):
     def test_title(self):
         driver = self.driver
         driver.get("http://demo-store.seleniumacademy.com/"),
-        driver.save_screenshot("test.png")
+        driver.save_screenshot("screenshot/test.png")
 
     def tearDown(self):
         self.driver.close()
