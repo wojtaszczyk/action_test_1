@@ -3,7 +3,7 @@ name: Python CI
 on: [push, pull_request]
 
 jobs: 
-  buil:
+  build:
 
     runs-on: ubuntu-latest
   
