@@ -27,4 +27,4 @@ jobs:
 
     - name: Informacje
       run: |
-        echo "💡the ${{ github.repozitory }} has been cloned to the runner ."
+        echo "💡the ${{ github.repository }} has been cloned to the runner ."
