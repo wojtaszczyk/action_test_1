@@ -24,7 +24,7 @@
           uses: actions/checkout@v3
         - name: Install Postgres client
           run: |
-            sudo apt-get -yqq install postgres-client
+            sudo apt-get -yqq install postgresql-client
         - name: Check postgres service
           env:
             PGPASSWORD: postgres
