@@ -3,11 +3,16 @@
 
 name: Python application Flask
 
+#on:
+#  push:
+#    branches: [ "main" ]
+#  pull_request:
+#    branches: [ "main" ]
+
+
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  schedule:
+    - cron: '0 0 * * 1'
 
 permissions:
   contents: read
