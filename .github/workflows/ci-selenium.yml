@@ -1,6 +1,6 @@
   name: Selenium Python CI
-  #chcemy żeby zaczął się po push'u
-  on: [push]
+  on:
+    workflow_dispatch:
   jobs:
     build:
       runs-on: ubuntu-latest
