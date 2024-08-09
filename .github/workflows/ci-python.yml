@@ -24,3 +24,7 @@ jobs:
     - name: Run tests
       run: |
         pytest
+
+    - name: Informacje
+      run: |
+        echo "💡the ${{ github.repozitory }} has been cloned to the runner ."
