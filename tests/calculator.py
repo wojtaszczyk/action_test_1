@@ -1,4 +1,4 @@
 class Calculator:
-  def ass(a,b):
+  def add(a,b):
     return a+b
     
