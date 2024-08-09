@@ -6,7 +6,7 @@
     node_job:
       runs-on: ubuntu-latest
       container:
-        image: node.12
+        image: node:12
       steps:
         - name: Check version
           run: |
